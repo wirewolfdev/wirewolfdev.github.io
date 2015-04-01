@@ -1,0 +1,931 @@
+Index: css/style.css
+===================================================================
+--- css/style.css	(revision 4)
++++ css/style.css	(working copy)
+@@ -24,7 +24,15 @@
+ 	margin:0;	
+ }
+ .header {
+-	padding-top: 3em;
++	padding-top: 2em;
++	/*
++	Leandro Andrade, 30/03/2015
++	Heather fixa.
++	*/
++	position: fixed;
++	background-color: #f4f4f4;
++	width: 100%;
++	z-index:100;
+ }
+ .logo,.top-nav{
+ 	float: left;
+@@ -209,6 +217,11 @@
+ /*----*/
+ .banner {
+ 	padding: 2em 0;
++	/*
++	Leandro Andrade Rocha, 30/03/2015.
++	Posicionar corretamente com o header.
++	*/
++	padding-top: 10em;
+ }
+ .banner-matter{
+ 	float:left;
+@@ -231,6 +244,14 @@
+ 	float:right;
+ }
+ /*----*/
++.port-top,.service {
++
++	/*
++	Leandro Andrade Rocha, 01/04/2015.
++	Posicionar corretamente com o header.
++	*/	
++	padding-top: 4.5em;
++}
+ .port{
+ 	float:left;
+ 	color:#a2a3a3;
+@@ -307,7 +328,7 @@
+ 	display: inline-block;
+ 	position: absolute;
+ 	bottom: 50px;
+-left: 114px;
++	left: 114px;
+ }
+ .portfolio img {
+ 	max-width:100%;
+@@ -926,11 +947,18 @@
+ ul.social li a i.dot:hover{
+ 	background-position:-292px -53px;
+ }
++/*
++Leandro Andrade, 31/03/2015.
++ Centralizar o link para o tema utilizado.
++ Footer
++*/
+ .footer-class{
+-	float:right;
++	/*float:right;*/
++	width: 100%;
+ 	color:#fff;
+ 	font-size:1.1em;
+ 	padding-top: 0.9em;
++	text-align: center;
+ }
+ .footer-bottom {
+ 	border-top: 1px solid #fff;
+Index: images/logo2.png
+===================================================================
+Cannot display: file marked as a binary type.
+svn:mime-type = application/octet-stream
+Index: images/logo2.png
+===================================================================
+--- images/logo2.png	(revision 0)
++++ images/logo2.png	(working copy)
+
+Property changes on: images/logo2.png
+___________________________________________________________________
+Added: svn:mime-type
+## -0,0 +1 ##
++application/octet-stream
+\ No newline at end of property
+Index: images/me_leandro.jpg
+===================================================================
+Cannot display: file marked as a binary type.
+svn:mime-type = application/octet-stream
+Index: images/me_leandro.jpg
+===================================================================
+--- images/me_leandro.jpg	(revision 0)
++++ images/me_leandro.jpg	(working copy)
+
+Property changes on: images/me_leandro.jpg
+___________________________________________________________________
+Added: svn:mime-type
+## -0,0 +1 ##
++application/octet-stream
+\ No newline at end of property
+Index: images/me_paulo.jpg
+===================================================================
+Cannot display: file marked as a binary type.
+svn:mime-type = application/octet-stream
+Index: images/me_paulo.jpg
+===================================================================
+--- images/me_paulo.jpg	(revision 0)
++++ images/me_paulo.jpg	(working copy)
+
+Property changes on: images/me_paulo.jpg
+___________________________________________________________________
+Added: svn:mime-type
+## -0,0 +1 ##
++application/octet-stream
+\ No newline at end of property
+Index: images/me_victor.jpg
+===================================================================
+Cannot display: file marked as a binary type.
+svn:mime-type = application/octet-stream
+Index: images/me_victor.jpg
+===================================================================
+--- images/me_victor.jpg	(revision 0)
++++ images/me_victor.jpg	(working copy)
+
+Property changes on: images/me_victor.jpg
+___________________________________________________________________
+Added: svn:mime-type
+## -0,0 +1 ##
++application/octet-stream
+\ No newline at end of property
+Index: index.html
+===================================================================
+--- index.html	(revision 4)
++++ index.html	(working copy)
+@@ -6,407 +6,388 @@
+ -->
+ <!DOCTYPE html>
+ <html>
+-<head>
+-<title>	Freelancer-plus A Corporate Category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
+-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+-<script src="js/jquery.min.js"></script>
+-<!-- Custom Theme files -->
+-<!--theme-style-->
+-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+-<!--//theme-style-->
+-<meta name="viewport" content="width=device-width, initial-scale=1">
+-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+-<meta name="keywords" content="Freelancer-plus Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+-<!--fonts-->
+-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+-<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+-<!--//fonts-->
+-<script type="text/javascript" src="js/move-top.js"></script>
+-<script type="text/javascript" src="js/easing.js"></script>
+-				<script type="text/javascript">
+-					jQuery(document).ready(function($) {
+-						$(".scroll").click(function(event){		
+-							event.preventDefault();
+-							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+-						});
+-					});
+-					</script>
++    <head>
++    <!--
++    Leandro Andrade, 01/04/2015
++    -->
++        <title>WireWolf</title>
++        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
++        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
++        <script src="js/jquery.min.js"></script>
++        <!-- Custom Theme files -->
++        <!--theme-style-->
++        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
++        <!--//theme-style-->
++        <meta name="viewport" content="width=device-width, initial-scale=1">
++        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
++        <meta name="keywords" content="Freelancer-plus Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
++              Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
++        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
++        <!--fonts-->
++        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
++        <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
++        <!--//fonts-->
++        <script type="text/javascript" src="js/move-top.js"></script>
++        <script type="text/javascript" src="js/easing.js"></script>
++        <script type="text/javascript">
++            jQuery(document).ready(function ($) {
++                $(".scroll").click(function (event) {
++                    event.preventDefault();
++                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
++                });
++            });
++        </script>
+ 
+-</head>
+-<body>
+-<!--header-->
+-	<div class="header" id="home">
+-		<div class="container">	
+-			<div class="logo">
+-				<h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+-			</div>
+-			<div class="header-bottom">
+-				<div class="top-nav">
+-					<span class="menu"> </span>
+-					<ul>
+-						<li  ><a href="#home" class="scroll">Home</a></li>
+-						<li><a href="#services" class="scroll"> Services</a></li>
+-						<li><a href="#portfolio" class="scroll">Portfolio </a></li>
+-						<li><a href="blog.html" >Blog</a></li>
+-						<li><a href="contact.html">contact</a></li>
+-					</ul>
+-					<!--script-->
+-				<script>
+-					$("span.menu").click(function(){
+-						$(".top-nav ul").slideToggle(500, function(){
+-						});
+-					});
+-			</script>
+-				</div>
+-			 <!-- start search-->
+-			<div class="search-box">
+-			   <div id="sb-search" class="sb-search">
+-				  <form>
+-					 <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+-					 <input class="sb-search-submit" type="submit" value="">
+-					 <span class="sb-icon-search"> </span>
+-				  </form>
+-			    </div>
+-			 </div>
+-			 <!----search-scripts---->
+-			 <script src="js/classie.js"></script>
+-			 <script src="js/uisearch.js"></script>
+-			   <script>
+-				 new UISearch( document.getElementById( 'sb-search' ) );
+-			   </script>
+-				<!----//search-scripts---->
+-			
+-			<div class="clearfix"> </div>
+-		</div>
+-		<div class="clearfix"> </div>
+-		</div>
+-	</div>
+-	<!---->
+-	
+-	<div class="container">		
+-		<div class="banner">
+-			<div class="banner-matter">
+-				<h2>Creative Ideas Live Here</h2>
+-				<p>Aliquam suscipit vel nulla quis eleifend. Maecenas vitae tristique ante. Sed sit amet vehicula libero.</p>		
+-			 </div>
+-			<div class="tv">
+-				<img class="img-responsive" src="images/tv.png" alt="">
+-			</div>
+-				 <div class="clearfix"> </div>
+-		</div>
+-	</div>
+-	<!---->
+-	<div class="container">	
+-	<div class="works" id="portfolio">
+-			<div class=" port-top">									
+-				<h3 class="port">Latest Works</h3>
+-					<ul id="filters">
+-						<li class="active"><span class="filter " data-filter="app card icon set sit web">All</span></li>
+-						<li><span class="filter" data-filter="app">WEB</span></li>
+-						<li><span class="filter" data-filter="card"> MOBILE </span></li>
+-						<li><span class="filter" data-filter="icon"> PHOTOGRAPHY</span></li>
+-						<li><span class="filter" data-filter="set"> DESIGN</span></li>
+-						<li><span class="filter" data-filter="add"> TYPE</span></li>
+-					</ul>
+-					<div class="clearfix"> </div>
+-				</div>
+-					<div id="portfoliolist">
+-					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+-						<div class="portfolio-wrapper ">		
+-							<a href="single.html" class="b-link-stripe b-animate-go">
+-						    <img class="img-responsive" src="images/pi.jpg" alt=""  /> 
+-								<div class="b-wrapper">
+-									<h2 class="b-animate b-from-left ">	
+-										<span>Photo</span>									
+-										<button>View photo</button>
+-									</h2>
+-								</div>
+-						</a>																			
+-						</div>
+-					</div>				
+-					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+-						<div class="portfolio-wrapper">		
+-							<a href="single.html" class="b-link-stripe b-animate-go">
+-						    <img class="img-responsive" src="images/pi1.jpg" alt=""  />
+-						   	<div class="b-wrapper" class="b-link-stripe b-animate-go">
+-									<h2 class="b-animate b-from-left ">	
+-										<span>Photo</span>									
+-										<button>View photo</button>
+-									</h2>
+-								</div>
+-						</a>	
+-							
+-		                </div>
+-					</div>		
+-					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+-						<div class="portfolio-wrapper">		
+-							<a href="single.html" class="b-link-stripe b-animate-go">
+-						     <img class="img-responsive" src="images/pi2.jpg"  alt="" />
+-						     <div class="b-wrapper">
+-									<h2 class="b-animate b-from-left ">	
+-										<span>Photo</span>									
+-										<button>View photo</button>
+-									</h2>
+-								</div>
+-						</a>	
+-							
+-		                </div>
+-					</div>				
+-					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+-						<div class="portfolio-wrapper ">		
+-							<a href="single.html" class="b-link-stripe b-animate-go">
+-						     <img class="img-responsive" src="images/pi3.jpg" alt=""  />
+-						     <div class="b-wrapper">
+-									<h2 class="b-animate b-from-left ">	
+-										<span>Photo</span>									
+-										<button>View photo</button>
+-									</h2>
+-								</div>
+-						</a>							
+-	            </div>
+-					</div>	
+-					<div class="portfolio add mix_all" data-cat="add" style="display: inline-block; opacity: 1;">
+-						<div class="portfolio-wrapper ">		
+-							<a href="single.html" class="b-link-stripe b-animate-go">
+-						     <img class="img-responsive" src="images/pi4.jpg" alt=""  />
+-						    	<div class="b-wrapper">
+-									<h2 class="b-animate b-from-left ">	
+-										<span>Photo</span>									
+-										<button>View photo</button>
+-									</h2>
+-								</div>	
+-						</a>	
+-								
+-		                </div>
+-					</div>			
+-					<div class="portfolio set mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+-						<div class="portfolio-wrapper">		
+-							<a href="single.html" class="b-link-stripe b-animate-go">
+-						     <img class="img-responsive" src="images/pi5.jpg" alt=""  />
+-						     <div class="b-wrapper">
+-									<h2 class="b-animate b-from-left ">	
+-										<span>Photo</span>									
+-										<button>View photo</button>
+-									</h2>
+-								</div>
+-						    	
+-						</a>	
+-							
+-		                </div>
+-					</div>
+-					
+-					<div class="clearfix"> </div>
+-					</div>	
+-			<!-- Script for gallery Here -->
+-				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+-					<script type="text/javascript">
+-					$(function () {
+-						
+-						var filterList = {
+-						
+-							init: function () {
+-							
+-								// MixItUp plugin
+-								// http://mixitup.io
+-								$('#portfoliolist').mixitup({
+-									targetSelector: '.portfolio',
+-									filterSelector: '.filter',
+-									effects: ['fade'],
+-									easing: 'snap',
+-									// call the hover effect
+-									onMixEnd: filterList.hoverEffect()
+-								});				
+-							
+-							},
+-							
+-							hoverEffect: function () {
+-							
+-								// Simple parallax effect
+-								$('#portfoliolist .portfolio').hover(
+-									function () {
+-										$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+-										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+-									},
+-									function () {
+-										$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+-										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+-									}		
+-								);				
+-							
+-							}
+-				
+-						};
+-						
+-						// Run the show!
+-						filterList.init();
+-					});	
+-					</script>
+-			<!-- Gallery Script Ends -->
+-			</div>
+-		</div>
+-			<!---->
+-		<div class="container">	
+-			<div class="service" id="services">
+-				<div class=" service-top">									
+-					<h3 class="ser">Our Services</h3>
+-					<p class="sed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. </p>
+-					<div class="clearfix"> </div>
+-				</div>
+-				<div class=" services-grid">
+-					<div class="col-md-4 service-grid">
+-						<a href="single.html"><img class="img-responsive" src="images/s1.png" alt=" "></a>
+-						<h5>Flat Design</h5>
+-						<p>Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+-					</div>
+-					<div class="col-md-4 service-grid">
+-						<a href="single.html"><img class="img-responsive" src="images/s2.png" alt=" "></a>
+-						<h5>Great Ideas</h5>
+-						<p>Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+-					</div>
+-					<div class="col-md-4 service-grid">
+-						<a href="single.html"><img class="img-responsive" src="images/s3.png" alt=" "></a>
+-						<h5>Browser  Compatibility</h5>
+-						<p>Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+-					</div>		
+-				<div class="clearfix"> </div>
+-			</div>
+-		</div>
+-	</div>
+-			<!---->
+-		<div class="container">
+-			<div class="meet">
+-				<div class=" team-top">									
+-					<h3 class="team">Meet the Team</h3>
+-					<p class="sit">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. </p>
+-					<div class="clearfix"> </div>
+-				</div>
+-				<div class=" team-grid">
+-					<div class="col-md-4 grid-team">
+-						<a href="single.html"><img class="img-responsive" src="images/me.png" alt=" "></a>
+-						<h4>JOHN SMITH</h4>
+-						<h5>Creative Director</h5>
+-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. </p>
+-						<ul class="social-in">
+-								<li><a href="#"><i> </i></a></li>						
+-								<li><a href="#"><i class="thumblr"> </i></a></li>
+-								<li><a href="#"><i class="pin"> </i></a></li>
+-								
+-							</ul>
+-					</div>
+-					<div class="col-md-4  grid-team">
+-						<a href="single.html"><img class="img-responsive" src="images/me.png" alt=" "></a>
+-						<h4>JOHN SMITH</h4>
+-						<h5>Creative Director</h5>
+-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. </p>
+-						<ul class="social-in">
+-								<li><a href="#"><i> </i></a></li>						
+-								<li><a href="#"><i class="thumblr"> </i></a></li>
+-								<li><a href="#"><i class="pin"> </i></a></li>
+-								
+-							</ul>
+-					</div>
+-					<div class="col-md-4  grid-team">
+-						<a href="single.html"><img class="img-responsive" src="images/me.png" alt=" "></a>
+-						<h4>JOHN SMITH</h4>
+-						<h5>Creative Director</h5>
+-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. </p>
+-						<ul class="social-in">
+-								<li><a href="#"><i> </i></a></li>						
+-								<li><a href="#"><i class="thumblr"> </i></a></li>
+-								<li><a href="#"><i class="pin"> </i></a></li>
+-								
+-							</ul>
+-					</div>		
+-				<div class="clearfix"> </div>
+-			</div>
+-		</div>
+-	</div>
+-			<!---->
+-			<div class="footer" >
+-			    <div class="container">
+-				<div class="footer-top" >
+-				<div class="col-md-4 twitter">
+-						
+-							<h4>Latest Tweets</h4>
+-							<div class="twitter-in">
+-								<p>PSD Template: Flat One Page Website <p>
+-								<a href="#" >http://bit.ly/1kfcA8M </a>
+-								<span>27 Oct 2014</span>
+-							</div>
+-							<div class="twitter-in">
+-								<p>PSD Template: Flat One Page Website <p>
+-								<a href="#" >http://bit.ly/1kfcA8M </a>
+-								<span>27 Oct 2014</span>
+-							</div>
+-						</div>
+-					
+-				    <div class="col-md-4 twitter">
+-				
+-						   <h4>Instagram</h4>
+-						   <ul class="box-in">
+-							<li><a href="#"></a></li>
+-							<li><a href="#"></a></li>
+-							<li><a href="#"></a></li>
+-							<li><a href="#"></a></li>
+-							<li><a href="#"></a></li>
+-							<li><a href="#"></a></li>
+-							<li><a href="#"></a></li>
+-							<li><a href="#"></a></li>
+-							<li><a href="#"></a></li>
+-							
+-						   </ul>
+-						</div>
+-					
+-					<div class="col-md-4 twitter">
+-						<h4>Contact Us</h4>
+-							<div class="contact">
+-								<form>
+-									<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+-									<input type="text" class="text" value="Email " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email ';}">
+-									<textarea cols="10" rows="3" value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+-								</form>
+-								<div class="submit">
+-									<form>
+-										<input type="submit" value="SEND">
+-									</form>
+-								</div>
+-									<div class="clearfix"></div>
++    </head>
++    <body>
++        <!--header-->
++        <div class="header" id="home">
++            <div class="container">	
++                <div class="logo">
++                    <h1><a href="index.html"><img src="images/logo2.png" alt=""></a></h1>
++                </div>
++                <div class="header-bottom">
++                    <div class="top-nav">
++                        <span class="menu"> </span>
++                        <ul>
++                            <li><a href="#who" class="scroll">Home</a></li>
++                            <li><a href="#services" class="scroll"> Serviços</a></li>
++                            <li><a href="#portfolio" class="scroll"> Portfolio </a></li>
++                            <li><a href="contact.html">Contato</a></li>
++                        </ul>
++                        <!--script-->
++                        <script>
++                            $("span.menu").click(function () {
++                                $(".top-nav ul").slideToggle(500, function () {
++                                });
++                            });
++                        </script>
++                    </div>
++                    <!-- start search-->
++                    <div class="search-box">
++                        <div id="sb-search" class="sb-search">
++                            <form>
++                                <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
++                                <input class="sb-search-submit" type="submit" value="">
++                                <span class="sb-icon-search"> </span>
++                            </form>
++                        </div>
++                    </div>
++                    <!----search-scripts---->
++                    <script src="js/classie.js"></script>
++                    <script src="js/uisearch.js"></script>
++                    <script>
++                             new UISearch(document.getElementById('sb-search'));
++                    </script>
++                    <!----//search-scripts---->
++
++                    <div class="clearfix"> </div>
++                </div>
++                <div class="clearfix"> </div>
++            </div>
++        </div>
++        <!---->
++
++        <div class="container">		
++            <div class="banner" id="who">
++                <div class="banner-matter">
++                    <h2>Quem Somos</h2>
++                    <p>A Wire Wolf é uma fábrica de software voltada na pesquisa, desenvolvimento e implantação de sistemas para micro e pequenas empresas.</p>
++                    <p>Sesenvolvemos com as mais novas tecnologias no mercado, indo de soluções desktop, passando pelas incríveis facetas dos apps mobile até a computação na nuvem. Nossa missão é fazer as ideais sairem do papel e gerar software de qualidade para os clientes.</p>
++                </div>
++                <div class="tv">
++                    <img class="img-responsive" src="images/tv.png" alt="">
++                </div>
++                <div class="clearfix"> </div>
++            </div>
++        </div>
++        <!---->
++        <div class="container">	
++            <div class="service" id="services">
++                <div class=" service-top">									
++                    <h3 class="ser">Nossos Serviços</h3>
++                    <p class="sed">Conheça o que podemos fazer para o seu negócio: </p>
++                    <div class="clearfix"> </div>
++                </div>
++                <div class=" services-grid">
++                    <div class="col-md-4 service-grid">
++                        <a href="single.html"><img class="img-responsive" src="images/s1.png" alt=" "></a>
++                        <h5>Desenvolvimento de Websites</h5>
++                        <p>Desenvolvemos websites estáticos e responsivos para micro e pequenas empresas.</p>
++                    </div>
++                    <div class="col-md-4 service-grid">
++                        <a href="single.html"><img class="img-responsive" src="images/s2.png" alt=" "></a>
++                        <h5>Software House </h5>
++                        <p>Tem uma ideia de software para alavancar o seu negócio? Nossos colaboradores adoram desafios, entre em contato.</p>
++                    </div>
++                    <div class="col-md-4 service-grid">
++                        <a href="single.html"><img class="img-responsive" src="images/s3.png" alt=" "></a>
++                        <h5>Multiplataforma</h5>
++                        <p>Gostamos de desenvolver sempre com as mais novas tecnologias do mercado, indo de soluções desktop até apps mobile em Android.</p>
++                    </div>		
++                    <div class="clearfix"> </div>
++                </div>
++            </div>
++        </div>
++        <!---->
++        <div class="container">	
++            <div class="works" id="portfolio">
++                <div class="port-top">									
++                    <h3 class="port">Trabalhos mais Recentes</h3>
++                    <ul id="filters">
++                        <li class="active"><span class="filter " data-filter="app card icon set sit web">All</span></li>
++                        <li><span class="filter" data-filter="app">WEB</span></li>
++                        <li><span class="filter" data-filter="card"> MOBILE </span></li>
++                        <li><span class="filter" data-filter="icon"> PHOTOGRAPHY</span></li>
++                        <li><span class="filter" data-filter="set"> DESIGN</span></li>
++                        <li><span class="filter" data-filter="add"> TYPE</span></li>
++                    </ul>
++                    <div class="clearfix"> </div>
++                </div>
++                <div id="portfoliolist">
++                    <div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
++                        <div class="portfolio-wrapper ">		
++                            <a href="single.html" class="b-link-stripe b-animate-go">
++                                <img class="img-responsive" src="images/pi.jpg" alt=""  /> 
++                                <div class="b-wrapper">
++                                    <h2 class="b-animate b-from-left ">	
++                                        <span>Photo</span>									
++                                        <button>View photo</button>
++                                    </h2>
++                                </div>
++                            </a>																			
++                        </div>
++                    </div>				
++                    <div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
++                        <div class="portfolio-wrapper">		
++                            <a href="single.html" class="b-link-stripe b-animate-go">
++                                <img class="img-responsive" src="images/pi1.jpg" alt=""  />
++                                <div class="b-wrapper" class="b-link-stripe b-animate-go">
++                                    <h2 class="b-animate b-from-left ">	
++                                        <span>Photo</span>									
++                                        <button>View photo</button>
++                                    </h2>
++                                </div>
++                            </a>	
++
++                        </div>
++                    </div>		
++                    <div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
++                        <div class="portfolio-wrapper">		
++                            <a href="single.html" class="b-link-stripe b-animate-go">
++                                <img class="img-responsive" src="images/pi2.jpg"  alt="" />
++                                <div class="b-wrapper">
++                                    <h2 class="b-animate b-from-left ">	
++                                        <span>Photo</span>									
++                                        <button>View photo</button>
++                                    </h2>
++                                </div>
++                            </a>	
++
++                        </div>
++                    </div>				
++                    <div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
++                        <div class="portfolio-wrapper ">		
++                            <a href="single.html" class="b-link-stripe b-animate-go">
++                                <img class="img-responsive" src="images/pi3.jpg" alt=""  />
++                                <div class="b-wrapper">
++                                    <h2 class="b-animate b-from-left ">	
++                                        <span>Photo</span>									
++                                        <button>View photo</button>
++                                    </h2>
++                                </div>
++                            </a>							
++                        </div>
++                    </div>	
++                    <div class="portfolio add mix_all" data-cat="add" style="display: inline-block; opacity: 1;">
++                        <div class="portfolio-wrapper ">		
++                            <a href="single.html" class="b-link-stripe b-animate-go">
++                                <img class="img-responsive" src="images/pi4.jpg" alt=""  />
++                                <div class="b-wrapper">
++                                    <h2 class="b-animate b-from-left ">	
++                                        <span>Photo</span>									
++                                        <button>View photo</button>
++                                    </h2>
++                                </div>	
++                            </a>	
++
++                        </div>
++                    </div>			
++                    <div class="portfolio set mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
++                        <div class="portfolio-wrapper">		
++                            <a href="single.html" class="b-link-stripe b-animate-go">
++                                <img class="img-responsive" src="images/pi5.jpg" alt=""  />
++                                <div class="b-wrapper">
++                                    <h2 class="b-animate b-from-left ">	
++                                        <span>Photo</span>									
++                                        <button>View photo</button>
++                                    </h2>
++                                </div>
++
++                            </a>	
++
++                        </div>
++                    </div>
++
++                    <div class="clearfix"> </div>
++                </div>	
++                <!-- Script for gallery Here -->
++                <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
++                <script type="text/javascript">
++            $(function () {
++
++                var filterList = {
++                    init: function () {
++
++                        // MixItUp plugin
++                        // http://mixitup.io
++                        $('#portfoliolist').mixitup({
++                            targetSelector: '.portfolio',
++                            filterSelector: '.filter',
++                            effects: ['fade'],
++                            easing: 'snap',
++                            // call the hover effect
++                            onMixEnd: filterList.hoverEffect()
++                        });
++
++                    },
++                    hoverEffect: function () {
++
++                        // Simple parallax effect
++                        $('#portfoliolist .portfolio').hover(
++                                function () {
++                                    $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
++                                    $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
++                                },
++                                function () {
++                                    $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
++                                    $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
++                                }
++                        );
++
++                    }
++
++                };
++
++                // Run the show!
++                filterList.init();
++            });
++                </script>
++                <!-- Gallery Script Ends -->
++            </div>
++        </div>
++
++        <!---->
++        <div class="container">
++            <div class="meet">
++                <div class=" team-top">									
++                    <h3 class="team">Conheça a Equipe</h3>
++                    <p class="sit">Conheça a "matilha":</p>
++                    <div class="clearfix"> </div>
++                </div>
++                <div class=" team-grid">
++                    <div class="col-md-4 grid-team">
++                        <a href="single.html"><img class="img-responsive" src="images/me_leandro.jpg" alt=" "></a>
++                        <h4>LEANDRO ROCHA</h4>
++                        <h5>Desenvolvedor</h5>
++                        <p>Percursor da Skynet com Internet das Coisas. Esta sem tempo para jogar o Devil May Cry. Desenvolve em Java, C# e Android.</p>
++                        <ul class="social-in">
++                            <!--<li><a href="#"><i> </i></a></li>				-->
++                            <li><a href="https://twitter.com/f_kira" target="_Blank"><i class="thumblr"></i></a></li>										
++                            <!--<li><a href="#"><i class="pin"> </i></a></li>-->
++
++                        </ul>
++                    </div>
++                    <div class="col-md-4  grid-team">
++                        <a href="single.html"><img class="img-responsive" src="images/me_paulo.jpg" alt=" "></a>
++                        <h4>PAULO HENRIQUE</h4>
++                        <h5>Desenvolvedor</h5>
++                        <p>Teenager Mutant Ninja Robot. Oraniza os jobs. Desenvolve em PHP, Java e C#.</p>
++                        <ul class="social-in">
++                            <li><a href="#"><i> </i></a></li>						
++                            <li><a href="https://twitter.com/siqueira_paulo"><i class="thumblr"> </i></a></li>
++                            <li><a href="#"><i class="pin"> </i></a></li>
++
++                        </ul>
++                    </div>
++                    <div class="col-md-4  grid-team">
++                        <a href="single.html"><img class="img-responsive" src="images/me_victor.jpg" alt=" "></a>
++                        <h4>VICTOR HUGO</h4>
++                        <h5>Desenvolvedor</h5>
++                        <p>Zumbi Vegano Alienígena. Um cara pé no chão. Desenvolve em Java, PHP e Android</p>
++                        <ul class="social-in">
++                            <li><a href="#"><i> </i></a></li>						
++                            <li><a href="#"><i class="thumblr"> </i></a></li>
++                            <li><a href="#"><i class="pin"> </i></a></li>
++
++                        </ul>
++                    </div>		
++                    <div class="clearfix"> </div>
++                </div>
++            </div>
++        </div>
++        <!---->
++        <div class="footer" >
++            <div class="container">
++                <div class="footer-top">
++                    <!--
++                    Leandro Andrade, 31/03/2015.
++                    -->
++                    <div class="col-md-6 twitter" style="float:left;width:100%;padding-left:20%;padding-right:20%;">
++                        <h4>Contact Us</h4>
++                        <div class="contact">
++                            <form>
++                                <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {
++                                                                                    this.value = 'Name';
++                                                                                }">
++                                <input type="text" class="text" value="Email " onfocus="this.value = '';" onblur="if (this.value == '') {
++                                                                                    this.value = 'Email ';
++                                                                                }">
++                                <textarea cols="10" rows="3" value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {
++                                                                                    this.value = 'Message';
++                                                                                }">Message</textarea>
++                            </form>
++                            <div class="submit">
++                                <form>
++                                    <input type="submit" value="SEND">
++                                </form>
+                             </div>
+-					</div>
+-					
+-						<div class="clearfix"></div>
+-						</div>
+-			<div class="footer-bottom">
+-				<ul class="social">
+-					<li><a href="#"><i> </i></a></li>						
+-					<li><a href="#"><i class="facebook"> </i></a></li>
+-					<li><a href="#"><i class="html"> </i></a></li>
+-					<li><a href="#"><i class="dot"> </i></a></li>
+-				</ul>
+-				<p class="footer-class">Copyright © 2015 Freelancer-plus Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+-				<div class="clearfix"></div>
+-			</div>						
+-		</div>
+-		 <script type="text/javascript">
+-						$(document).ready(function() {
+-							/*
+-							var defaults = {
+-					  			containerID: 'toTop', // fading element id
+-								containerHoverID: 'toTopHover', // fading element hover id
+-								scrollSpeed: 1200,
+-								easingType: 'linear' 
+-					 		};
+-							*/
+-							
+-							$().UItoTop({ easingType: 'easeOutQuart' });
+-							
+-						});
+-					</script>
+-				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
++                            <div class="clearfix"></div>
++                        </div>
++                    </div>
+ 
+-	</div>
+-</body>
++                    <div class="clearfix"></div>
++                </div>
++                <div class="footer-bottom">
++                    <!--
++                            <ul class="social">
++                                    <li><a href="#"><i> </i></a></li>						
++                                    <li><a href="#"><i class="facebook"> </i></a></li>
++                                    <li><a href="#"><i class="html"> </i></a></li>
++                                    <li><a href="#"><i class="dot"> </i></a></li>
++                            </ul>
++                    -->
++                    <p class="footer-class">Copyright © 2015 Freelancer-plus Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
++                    <div class="clearfix"></div>
++                </div>						
++            </div>
++            <script type="text/javascript">
++                $(document).ready(function () {
++                    /*
++                     var defaults = {
++                     containerID: 'toTop', // fading element id
++                     containerHoverID: 'toTopHover', // fading element hover id
++                     scrollSpeed: 1200,
++                     easingType: 'linear' 
++                     };
++                     */
++
++                    $().UItoTop({easingType: 'easeOutQuart'});
++
++                });
++            </script>
++            <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
++
++        </div>
++    </body>
+ </html>
+\ No newline at end of file
