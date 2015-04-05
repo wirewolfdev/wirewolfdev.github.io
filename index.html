@@ -78,12 +78,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li><a href="contact.html">Contato</a></li>
 						</ul>
 						<!--script-->
-						<script>
-							$("span.menu").click(function(){
-								$(".top-nav ul").slideToggle(500, function(){
-								});
-							});
-						</script>
+						
 					</nav>
 				 <!-- start search-->
 				<div class="search-box">
@@ -439,7 +434,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						
 				$().UItoTop({ easingType: 'easeOutQuart' });			
 			});
-		</script>
+			
+			//função do menu encolhido
+			$("span.menu").click(function(){
+								$(".top-nav ul").slideToggle(500, function(){
+								});
+							});
+		
+							
+						</script>
+						
 	</body>
 </html>
 
