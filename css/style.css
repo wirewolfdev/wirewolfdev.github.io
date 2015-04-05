@@ -24,7 +24,15 @@ h1,h2,h3,h4,h5,h6,label,p{
 	margin:0;	
 }
 .header {
-	padding-top: 3em;
+	padding-top: 2em;
+	/*
+	Leandro Andrade, 30/03/2015
+	Heather fixa.
+	*/
+	position: fixed;
+	background-color: #f4f4f4;
+	width: 100%;
+	z-index:100;
 }
 .logo,.top-nav{
 	float: left;
@@ -209,6 +217,11 @@ h1,h2,h3,h4,h5,h6,label,p{
 /*----*/
 .banner {
 	padding: 2em 0;
+	/*
+	Leandro Andrade Rocha, 30/03/2015.
+	Posicionar corretamente com o header.
+	*/
+	padding-top: 10em;
 }
 .banner-matter{
 	float:left;
@@ -231,6 +244,14 @@ h1,h2,h3,h4,h5,h6,label,p{
 	float:right;
 }
 /*----*/
+.port-top,.service {
+
+	/*
+	Leandro Andrade Rocha, 01/04/2015.
+	Posicionar corretamente com o header.
+	*/	
+	padding-top: 4.5em;
+}
 .port{
 	float:left;
 	color:#a2a3a3;
@@ -307,7 +328,7 @@ div#portfoliolist {
 	display: inline-block;
 	position: absolute;
 	bottom: 50px;
-left: 114px;
+	left: 114px;
 }
 .portfolio img {
 	max-width:100%;
@@ -926,11 +947,18 @@ ul.social li a i.html:hover{
 ul.social li a i.dot:hover{
 	background-position:-292px -53px;
 }
+/*
+Leandro Andrade, 31/03/2015.
+ Centralizar o link para o tema utilizado.
+ Footer
+*/
 .footer-class{
-	float:right;
+	/*float:right;*/
+	width: 100%;
 	color:#fff;
 	font-size:1.1em;
 	padding-top: 0.9em;
+	text-align: center;
 }
 .footer-bottom {
 	border-top: 1px solid #fff;
