@@ -1,0 +1,107 @@
+Index: trunk/css/style.css
+===================================================================
+--- trunk/css/style.css	(revision 8)
++++ trunk/css/style.css	(working copy)
+@@ -25,10 +25,6 @@
+ }
+ .header {
+ 	padding-top: 2em;
+-	/*
+-	Leandro Andrade, 30/03/2015
+-	Heather fixa.
+-	*/
+ 	position: fixed;
+ 	background-color: #f4f4f4;
+ 	width: 100%;
+@@ -1009,6 +1005,7 @@
+ }
+ }
+ @media(max-width:768px){
++
+ .header-bottom {
+ 	width: 53%;
+ }
+@@ -1100,6 +1097,7 @@
+ .sb-search-input {
+ 	width: 85%
+ }
++
+ }
+ @media(max-width:640px){
+ .banner-matter h2 {
+@@ -1130,6 +1128,23 @@
+ 	overflow: hidden;
+ }
+ }
++
++/*Remove caixa de pesquisa, entre 480 e 549 a caixa e o menu vão pra baixo*/
++@media(max-width:549px){
++.search-box {
++	display: none;
++}
++
++.top-nav{
++	float:none;
++}
++
++.header-bottom {
++	width: 10%;
++}
++
++}
++
+ @media(max-width:480px){
+ .search-box {
+ 	display: none;
+@@ -1210,6 +1225,7 @@
+ }
+ }
+ @media(max-width:320px){
++
+ .banner-matter {
+ 	padding: 1em 0 0;
+ 	width:53%;
+@@ -1226,14 +1242,11 @@
+ 	font-size: 1.2em;
+ }
+ .logo{
+-	width: 71%;
++	width: 81%;
+ }
+ .logo img{
+ 	width:100%;
+ }
+-.banner {
+-	padding: 1em 0;
+-}
+ .port, .ser, .team {
+ 	font-size: 1.4em;
+ }
+Index: trunk/index.html
+===================================================================
+--- trunk/index.html	(revision 8)
++++ trunk/index.html	(working copy)
+@@ -26,7 +26,9 @@
+ 		<style>
+ 			/*Logo do menu superior*/
+ 			#logoHeader{
+-				width: 234px;
++			
++			/*definir apenas tamanho máximo para diminuir o logo se o tamanho da tela for muito pequeno*/
++				max-width: 234px;
+ 			}
+ 			
+ 			/*Fotos da matilha*/
+@@ -440,6 +442,12 @@
+ 								$(".top-nav ul").slideToggle(500, function(){
+ 								});
+ 							});
++							
++			//retrair menu quando clicar em algum item
++			$(".top-nav ul").click(function(){
++				$(".top-nav ul").slideToggle(500, function(){
++								});
++			});
+ 		
+ 							
+ 						</script>
