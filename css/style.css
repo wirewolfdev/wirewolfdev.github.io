@@ -25,10 +25,6 @@ h1,h2,h3,h4,h5,h6,label,p{
 }
 .header {
 	padding-top: 2em;
-	/*
-	Leandro Andrade, 30/03/2015
-	Heather fixa.
-	*/
 	position: fixed;
 	background-color: #f4f4f4;
 	width: 100%;
@@ -1009,6 +1005,7 @@ ul.box-in {
 }
 }
 @media(max-width:768px){
+
 .header-bottom {
 	width: 53%;
 }
@@ -1100,6 +1097,7 @@ ul.box-in {
 .sb-search-input {
 	width: 85%
 }
+
 }
 @media(max-width:640px){
 .banner-matter h2 {
@@ -1130,6 +1128,23 @@ ul.box-in {
 	overflow: hidden;
 }
 }
+
+/*Remove caixa de pesquisa, entre 480 e 549 a caixa e o menu vão pra baixo*/
+@media(max-width:549px){
+.search-box {
+	display: none;
+}
+
+.top-nav{
+	float:none;
+}
+
+.header-bottom {
+	width: 10%;
+}
+
+}
+
 @media(max-width:480px){
 .search-box {
 	display: none;
@@ -1210,6 +1225,7 @@ p.info{
 }
 }
 @media(max-width:320px){
+
 .banner-matter {
 	padding: 1em 0 0;
 	width:53%;
@@ -1226,13 +1242,10 @@ p.info{
 	font-size: 1.2em;
 }
 .logo{
-	width: 71%;
+	width: 81%;
 }
 .logo img{
 	width:100%;
-}
-.banner {
-	padding: 1em 0;
 }
 .port, .ser, .team {
 	font-size: 1.4em;

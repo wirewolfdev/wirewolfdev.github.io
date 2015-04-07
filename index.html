@@ -26,7 +26,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<style>
 			/*Logo do menu superior*/
 			#logoHeader{
-				width: 234px;
+			
+			/*definir apenas tamanho máximo para diminuir o logo se o tamanho da tela for muito pequeno*/
+				max-width: 234px;
 			}
 			
 			/*Fotos da matilha*/
@@ -440,6 +442,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								$(".top-nav ul").slideToggle(500, function(){
 								});
 							});
+							
+			//retrair menu quando clicar em algum item
+			$(".top-nav ul").click(function(){
+				$(".top-nav ul").slideToggle(500, function(){
+								});
+			});
 		
 							
 						</script>
