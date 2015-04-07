@@ -16,6 +16,8 @@ function resizeDiv() {
       vph = $('#mast video').height() - 25; 
       $('#mast').css({'height': vph + 'px'});
 	  
+	  console.log($('#mast video').width());
+	  
 	  
 	  /*
 	  vph4 = $('#mast img#mast_inner-2 ').height() - 25; 
