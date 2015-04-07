@@ -1,0 +1,105 @@
+
+ 
+
+#mast{height:680px;background-repeat:no-repeat;background-size:cover;-moz-background-size:cover;-webkit-background-size:cover;overflow:hidden;position:relative;max-height:720px;padding:0;margin:0}
+ 
+
+#mast_inner-1{bottom:0;left:0;position:absolute;top:0;width:100%}
+ 
+
+#mast_inner-2{min-width:100%}
+ 
+.video-container 
+#mast_inner-2{min-height:100%}
+ 
+
+#mast #mast_inner-2 img{width:100%}
+ 
+
+.video-txt{position:absolute;top:34%;z-index:9;color:#fff;width:100%; text-align:center;}
+ 
+
+.video-txt h2{margin-bottom:0;font-size:54px;text-transform:uppercase;font-weight:300}
+ 
+
+.video-txt h3{font-size:26px;margin-bottom:40px;font-family:"proxima-nova",Helvetica,Arial,sans-serif}
+ 
+
+.video-txt a.btn{font-size:20px}
+ 
+.container-1140 video{max-width:100%}
+
+
+ 
+@media only screen and (min-width:959px){#mast_inner-1{background:#fff !important}
+ 
+}
+ 
+@media only screen and (max-width:768px){body{font-size:16px;-webkit-text-size-adjust:none}
+ 
+
+ 
+@media only screen and (min-width:768px) and (max-width:959px){
+ 
+#mast_inner-1{background:#fff !important}
+ 
+}
+ 
+@media only screen and (min-width:640px) and (max-width:768px){
+ 
+.video-txt{top:24%}
+ 
+.video-txt h2,.risker-img h2{font-size:36px}
+ 
+.video-txt h3,.risker-img h3{font-size:22px;margin-bottom:30px}
+ 
+.risker-img hgroup section{margin:100px 0 80px}
+ 
+#mast_inner-1{background:#fff !important}
+ 
+}
+ 
+@media only screen and (max-width:639px){
+ 
+#mast{height:350px}
+ 
+ 
+.video-txt{top:33%}
+ 
+.video-txt h2,.risker-img h2{font-size:36px}
+ 
+.video-txt h3,.risker-img h3{font-size:22px;margin-bottom:30px}
+ 
+ /*
+#mast video,#mast img#mast_inner-2,.video-txt a.btn{display:none !important}
+*/
+
+ 
+.video-txt a.btn.mobile-btn{display:inline-block !important}
+
+ 
+}
+ 
+@media only screen and (max-width:480px){.dark-panel .panel-content p.boxer,.panel-content p.boxer{width:100%;border:0;padding:inherit}
+ 
+.video-txt h2,.risker-img h2{font-size:24px}
+ 
+.video-txt h3,.risker-img h3{font-size:15px;margin-bottom:30px}
+ 
+.risker-img hgroup section{margin:80px 0 60px}
+ 
+#mast{height:258px !important}
+ 
+#mast video,#mast img#mast_inner-2,.video-txt a.btn{display:none !important}
+
+ 
+.video-txt a.btn.mobile-btn{display:inline-block !important}
+ 
+}
+ 
+@media screen and (max-width:320px){#mast{height:233px !important}}
+ 
+.center{
+text-align:center;
+}
+
