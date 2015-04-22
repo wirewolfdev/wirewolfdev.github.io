@@ -532,6 +532,9 @@ ul.social-in li a i{
 	-moz-transition: 0.5s all;
 	-ms-transition: 0.5s all;
 }
+ul.social-in li a i.linkedin{
+	background-position:-6px -44px;
+}
 ul.social-in li a i.thumblr{
 	background-position:-42px -44px;
 }
@@ -539,14 +542,8 @@ ul.social-in li a i.pin{
 	background-position:-79px -44px;
 }
 
-/*botão linkedin*/
-ul.social-in li a i.linkedin{
-	background: url(../images/linkedin-icon.png) no-repeat;
-}
-
-/* animações dos botões de perfil
 ul.social-in li a i:hover{
-	background-position:-6px -42px;
+	background-position:-6px -2px;
 }
 ul.social-in li a i.thumblr:hover{
 	background-position:-42px -4px;
@@ -554,7 +551,6 @@ ul.social-in li a i.thumblr:hover{
 ul.social-in li a i.pin:hover{
 	background-position:-79px -4px;
 }
-*/
 
 .team-top {
     padding-top: 3em;
