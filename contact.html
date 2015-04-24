@@ -6,186 +6,400 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html>
-<head>
-<title>	Freelancer-plus A Corporate Category Flat Bootstarp Responsive Website Template | Contact :: w3layouts</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Freelancer-plus Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--fonts-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-<!--//fonts-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-				<script type="text/javascript">
-					jQuery(document).ready(function($) {
-						$(".scroll").click(function(event){		
-							event.preventDefault();
-							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-						});
-					});
-					</script>
-
-</head>
-<body>
-<!--header-->
-	<div class="header">
-		<div class="container">	
-			<div class="logo">
-				<h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
-			</div>
-			<div class="header-bottom">
-				<div class="top-nav">
-					<span class="menu"> </span>
-					<ul>
-						<li  ><a href="index.html" >Home</a></li>
-						<li><a href="index.html" > Services</a></li>
-						<li><a href="index.html" >Portfolio </a></li>
-						<li><a href="blog.html" >Blog</a></li>
-						<li><a href="contact.html" >contact</a></li>
-					</ul>
-					<!--script-->
-				<script>
-					$("span.menu").click(function(){
-						$(".top-nav ul").slideToggle(500, function(){
-						});
-					});
-			</script>
-				</div>
-				 <!-- start search-->
-			<div class="search-box">
-			   <div id="sb-search" class="sb-search">
-				  <form>
-					 <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-					 <input class="sb-search-submit" type="submit" value="">
-					 <span class="sb-icon-search"> </span>
-				  </form>
-			    </div>
-			 </div>
-			 <!----search-scripts---->
-			 <script src="js/classie.js"></script>
-			 <script src="js/uisearch.js"></script>
-			   <script>
-				 new UISearch( document.getElementById( 'sb-search' ) );
-			   </script>
-				<!----//search-scripts---->
+	<head>
+		<title>WireWolf</title>
+		
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+		<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/owl.theme.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/owl.transitions.css" rel="stylesheet" type="text/css" media="all" />
+		
+		<!--fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Freelancer-plus Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		
+		<style>
+			/*Logo do menu superior*/
+			#logoHeader{
+				/*definir apenas tamanho máximo para diminuir o
+				logo se o tamanho da tela for muito pequeno*/
+				max-width: 234px;
+			}
 			
-			<div class="clearfix"> </div>
-		</div>
-		<div class="clearfix"> </div>
-		</div>
-	</div>
-	<!---->
-	<div class="container">
-		<div class="contact-page">
-		<div class=" map">
-			<h5>OUR LOCATION</h5>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37494223.23909492!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2sRussia!5e0!3m2!1sen!2sin!4v1415776049771"></iframe>
+			/*Fotos da matilha*/
+			.grid-team a img{
+				width: 169px;
+				
+				-webkit-border-radius: 40px 40px 40px 40px;
+				-moz-border-radius: 40px 40px 40px 40px;
+				border-radius: 90px 90px 90px 90px;
+			}
+			
+			/*configurações apenas para telas grandes*/
+			@media screen AND (min-width: 1024px){
+				/*Menu superior*/
+				.top-nav {
+					margin-left: -150px;
+				}
+								
+				/*Sobre nós*/
+				.banner-matter{
+					width: 620px;
+					margin-top: -90px;
+					margin-left: 100px;
+					
+					text-align: justify;
+				}
+				
+				/*Lobo - sobre nós*/
+				.tv img{
+					margin-right: 100px;
+				}
+			}
+			
+			/*----------------carousel do portifolio----------------*/
+			#portifolio_carousel .item{
+				display: block;
+				width: 80%;
+				height: auto;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+			
+			#portifolio_carousel .item a img{
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 0 auto;
+			}
+			
+			#portifolio_carousel .item a .resumo{
+				padding: 7px;
+				
+				background-color: rgba(0, 0, 0, 0.9);
+				
+				position: relative;
+				top: 0px;
+				left: 0px;
+				
+				width: 100%;
+			}
+			
+			#portifolio_carousel .item a .resumo header{
+				color: #FFF;
+				font-size: 18pt;
+			}
+			
+			#portifolio_carousel .item a .resumo section{
+				color: #FFF;
+			}
+			
+			@media screen AND (max-width: 700px){
+				#portifolio_carousel .item a .resumo{
+					text-align: center;
+				}
+				
+				#portifolio_carousel .item a .resumo section{
+					display: none;
+				}
+			}
+			
+			@media screen AND (max-width: 500px){
+				#portifolio_carousel .item a .resumo{
+					display: none;
+				}
+				.footer{
+					display: none;
+				}
+			}
+			
+			@media screen AND (max-width: 700px){
+				.footer{
+					position:relative;
+				}
+			}
+			
+			html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: 150px;}  /* must be same height as the footer */
+
+.footer {position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear:both;} 
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/
+}
+			
+		
+			
+			
+			
+		</style>
+	</head>
+	<body>
+	
+	
+	<div id="wrap">
+		<div id="main">
+	
+		<header class="header">
+			<div class="container">	
+				<div class="logo">
+					<h1><a href="index.html"><img id="logoHeader" src="images/logo.png" alt=""></a></h1>
+				</div>
+				<div class="header-bottom">
+					<nav class="top-nav">
+						<span class="menu"> </span>
+						<ul>
+							<li><a href="index.html" class="scroll">Home</a></li>						
+							<li><a href="index.html#portfolio" class="scroll">Portfólio</a></li>
+							<li><a href="index.html#services" class="scroll">Nossos Serviços</a></li>
+							<li><a href="index.html#matilha" class="scroll">Matilha (Equipe)</a></li>
+							<li><a href="..contact.html">Contato</a></li>
+						</ul>
+					</nav>
+				<div class="clearfix"> </div>
 			</div>
-			<div class="contact-non">
-					<div class="col-md-6 contact-inline">
-				     	<h5>Company Information</h5>
-						<p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.						</p>
-						    	<p>500 Lorem Ipsum Dolor Sit,</p>
-						   		<p>22-56-2-9 Sit Amet, Lorem,</p>
-						   		<p>USA</p>
-				   		<p>Phone:(00) 222 666 444</p>
-				   		<p>Fax: (010) 110 00 11 0</p>
-				 	 	 <p>Email: <a href="mailto:info@mycompany.com">info@mycompany.com</a></p>
-				   		<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+			<div class="clearfix"> </div>
+			</div>
+		</header>
+		
+		<div class="container" id="contato">		
+			<div class="banner">
+			
+			<div class="col-md-6 contact-inline">
+				     	<h5>Fale conosco</h5>
+						<p class="info">Você tem alguma dúvida, comentário ou sugestão?</p> 
+						<p class="info">Tem um projeto em mente e deseja fazer um orçamento conosco?</p>
+						<p class="info">Entre em contato conosco por um do meios abaixo ou preencha o formulário de contato, ficaremos felizes em te atender.</p>
+						<br/>
+						    	<p>Rua Campo de Brito, 02, Parque Maria Helena</p>
+						   		<p>Guarulhos, SP</p>
+						   		<p>Brasil</p>
+				   		<p>Phone:+55 (11) véi, quero colocar meu celular aqui não</p>
+				   		
+				 	 	 <p>Email: <a href="mailto:info@mycompany.com">contato@wirewolf.com</a></p>				   		
 				    </div>
-					<div class="col-md-6 contact-grid">
-					<h5>Contact form</h5>
+			
+				
+				<div class="col-md-6 contact-grid">
+					<h5>Formulário de Contato</h5>
 					<form>						
-						<input type="text" value="Name" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Name';}">
-						<input type="text" value="Phone number" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Phone number';}">					
-						<textarea cols="77" rows="6" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+						<input type="text" value="Nome" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Name';}">
+						<input type="text" value="Telefone" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Phone number';}">					
+						<textarea cols="77" rows="6" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Mensagem</textarea>
 						<div class="send-in">
-							<input type="submit" value="SUBMIT">
+							<input type="submit" value="ENVIAR">
 						</div>
 					</form>
-				</div>
-					<div class="clearfix"> </div>
+				</div>	
+				
+				
+				<div class="clearfix"> </div>
 			</div>
 		</div>
+		<!---->
 	</div>
-	
-			<!---->
-			<div class="footer" >
-			    <div class="container">
-				<div class="footer-top" >
-				<div class="col-md-4 twitter">
-						
-							<h4>Latest Tweets</h4>
-							<div class="twitter-in">
-								<p>PSD Template: Flat One Page Website <p>
-								<a href="#" >http://bit.ly/1kfcA8M </a>
-								<span>27 Oct 2014</span>
-							</div>
-							<div class="twitter-in">
-								<p>PSD Template: Flat One Page Website <p>
-								<a href="#" >http://bit.ly/1kfcA8M </a>
-								<span>27 Oct 2014</span>
-							</div>
-						</div>
-					
-				    <div class="col-md-4 twitter">
+</div>			
 				
-						   <h4>Instagram</h4>
-						   <ul class="box-in">
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							
-						   </ul>
+				
+		<div class="footer" >
+			<div class="container">
+				<!--<div class="footer-top" >
+					<div class="col-md-4 twitter">			
+						<h4>Latest Tweets</h4>
+						<div class="twitter-in">
+							<p>PSD Template: Flat One Page Website <p>
+							<a href="#" >http://bit.ly/1kfcA8M </a>
+							<span>27 Oct 2014</span>
 						</div>
-					
+						<div class="twitter-in">
+							<p>PSD Template: Flat One Page Website <p>
+							<a href="#" >http://bit.ly/1kfcA8M </a>
+							<span>27 Oct 2014</span>
+						</div>
+					</div>
+						
+					<div class="col-md-4 twitter">
+						<h4>Instagram</h4>
+						<ul class="box-in">
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>			
+					   </ul>
+					</div>
+						
 					<div class="col-md-4 twitter">
 						<h4>Contact Us</h4>
-							<div class="contact">
+						<div class="contact">
+							<form>
+								<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+								<input type="text" class="text" value="Email " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email ';}">
+								<textarea cols="10" rows="3" value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+							</form>
+							<div class="submit">
 								<form>
-									<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-									<input type="text" class="text" value="Email " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email ';}">
-									<textarea cols="10" rows="3" value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+									<input type="submit" value="SEND">
 								</form>
-								<div class="submit">
-									<form>
-										<input type="submit" value="SEND">
-									</form>
-								</div>
-									<div class="clearfix"></div>
-                            </div>
-					</div>
-					
-						<div class="clearfix"></div>
+							</div>
+							<div class="clearfix"></div>
 						</div>
-			<div class="footer-bottom">
-				<ul class="social">
-					<li><a href="#"><i> </i></a></li>						
-					<li><a href="#"><i class="facebook"> </i></a></li>
-					<li><a href="#"><i class="html"> </i></a></li>
-					<li><a href="#"><i class="dot"> </i></a></li>
-				</ul>
-				<p class="footer-class">Copyright © 2015 Freelancer-plus Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
-				<div class="clearfix"></div>
-			</div>						
+					</div>
+						
+					<div class="clearfix"></div>
+				</div>-->
+				<div class="footer-bottom">
+					<!-- <ul class="social">
+						<li><a href="#"><i> </i></a></li>						
+						<li><a href="#"><i class="facebook"> </i></a></li>
+						<li><a href="#"><i class="html"> </i></a></li>
+						<li><a href="#"><i class="dot"> </i></a></li>
+					</ul> -->
+					<p class="footer-class">Copyright © 2015 Freelancer-plus Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+					<div class="clearfix"></div>
+				</div>						
+			</div>
+			<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 		</div>
-	</div>
-</body>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+			
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		
+		<!-- Script for gallery Here -->
+		<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+		
+		<script type="text/javascript" src="js/owl.carousel.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+ 
+				$("#portifolio_carousel").owlCarousel({		 
+					navigation : true, // Show next and prev buttons
+					navigationText: ["anterior","próximo"],
+					slideSpeed : 500,
+					paginationSpeed : 400,
+					singleItem:true,
+					autoPlay: 10000,
+					transitionStyle: "fade"
+			 
+					// "singleItem:true" is a shortcut for:
+					// items : 1, 
+					// itemsDesktop : false,
+					// itemsDesktopSmall : false,
+					// itemsTablet: false,
+					// itemsMobile : false
+				});
+		 
+			});
+			
+			addEventListener(
+				"load",
+				function(){
+					setTimeout(hideURLbar, 0);
+				},
+				false);				
+			function hideURLbar(){
+				window.scrollTo(0,1);
+			}
+				
+		
+
+				
+			//botôes de navegação
+			$(function () {	
+				var filterList = {
+					init: function () {	
+						// MixItUp plugin
+						// http://mixitup.io
+						$('#portfoliolist').mixitup({
+							targetSelector: '.portfolio',
+							filterSelector: '.filter',
+							effects: ['fade'],
+							easing: 'snap',
+							// call the hover effect
+							onMixEnd: filterList.hoverEffect()
+						});										
+					},
+					hoverEffect: function () {
+						// Simple parallax effect
+						$('#portfoliolist .portfolio').hover(
+							function () {
+								$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+								$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+							},
+							function () {
+								$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+								$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+							}		
+						);					
+					}
+				};				
+				// Run the show!
+				filterList.init();
+			});
+	
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+						
+				$().UItoTop({ easingType: 'easeOutQuart' });			
+			});
+			
+			//função do menu encolhido
+			$("span.menu").click(function(){
+								$(".top-nav ul").slideToggle(500, function(){
+								});
+							});
+							
+			//retrair menu quando clicar em algum item
+			$(".top-nav ul").click(function(){	
+
+				if($(window).width()<750){	
+					$(".top-nav ul").slideToggle(500, function(){
+					});
+				}
+			});
+			
+			$(window).resize(function(){
+				if($(window).width()>750){	
+					$(".top-nav ul").show();
+				}else{
+					$(".top-nav ul").hide();
+				}
+			});					
+		</script>		
+	</body>
 </html>
+
+<!--Apenas duvide da capacidade do outro quando tiver certeza das próprias - Victor Hugo-->
