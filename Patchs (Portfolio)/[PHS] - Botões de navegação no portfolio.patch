@@ -1,0 +1,14 @@
+Index: trunk/index.html
+===================================================================
+--- trunk/index.html	(revision 25)
++++ trunk/index.html	(working copy)
+@@ -445,7 +445,8 @@
+ 			$(document).ready(function() {
+  
+ 				$("#portifolio_carousel").owlCarousel({		 
+-					navigation : false, // Show next and prev buttons
++					navigation : true, // Show next and prev buttons
++					navigationText: ["anterior","próximo"],
+ 					slideSpeed : 500,
+ 					paginationSpeed : 400,
+ 					singleItem:true,
