@@ -1,0 +1,51 @@
+#portifolio_carousel .item{
+	display: block;
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#portifolio_carousel .item a img{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+		
+#portifolio_carousel .item a .resumo{
+	padding: 7px;
+	
+	background-color: rgba(0, 0, 0, 0.9);
+	
+	position: relative;
+	top: 0px;
+	left: 0px;
+	
+	width: 100%;
+}
+
+#portifolio_carousel .item a .resumo header{
+	color: #FFF;
+	font-size: 18pt;
+}
+
+#portifolio_carousel .item a .resumo section{
+	color: #FFF;
+}
+
+@media screen AND (max-width: 700px){
+	#portifolio_carousel .item a .resumo{
+		text-align: center;
+	}
+	
+	#portifolio_carousel .item a .resumo section{
+		display: none;
+	}
+}
+
+@media screen AND (max-width: 500px){
+	#portifolio_carousel .item a .resumo{
+		display: none;
+	}
+}

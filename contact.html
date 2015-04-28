@@ -11,9 +11,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
-		<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="css/owl.theme.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="css/owl.transitions.css" rel="stylesheet" type="text/css" media="all" />
 		
 		<!--fonts-->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -23,134 +20,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="Freelancer-plus Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-		
-		<style>
-			/*Logo do menu superior*/
-			#logoHeader{
-				/*definir apenas tamanho máximo para diminuir o
-				logo se o tamanho da tela for muito pequeno*/
-				max-width: 234px;
-			}
-			
-			/*Fotos da matilha*/
-			.grid-team a img{
-				width: 169px;
-				
-				-webkit-border-radius: 40px 40px 40px 40px;
-				-moz-border-radius: 40px 40px 40px 40px;
-				border-radius: 90px 90px 90px 90px;
-			}
-			
-			/*configurações apenas para telas grandes*/
-			@media screen AND (min-width: 1024px){
-				/*Menu superior*/
-				.top-nav {
-					margin-left: -150px;
-				}
-								
-				/*Sobre nós*/
-				.banner-matter{
-					width: 620px;
-					margin-top: -90px;
-					margin-left: 100px;
-					
-					text-align: justify;
-				}
-				
-				/*Lobo - sobre nós*/
-				.tv img{
-					margin-right: 100px;
-				}
-			}
-			
-			/*----------------carousel do portifolio----------------*/
-			#portifolio_carousel .item{
-				display: block;
-				width: 80%;
-				height: auto;
-				margin: 0 auto;
-				margin-top: 20px;
-			}
-			
-			#portifolio_carousel .item a img{
-				display: block;
-				width: 100%;
-				height: auto;
-				margin: 0 auto;
-			}
-			
-			#portifolio_carousel .item a .resumo{
-				padding: 7px;
-				
-				background-color: rgba(0, 0, 0, 0.9);
-				
-				position: relative;
-				top: 0px;
-				left: 0px;
-				
-				width: 100%;
-			}
-			
-			#portifolio_carousel .item a .resumo header{
-				color: #FFF;
-				font-size: 18pt;
-			}
-			
-			#portifolio_carousel .item a .resumo section{
-				color: #FFF;
-			}
-			
-			@media screen AND (max-width: 700px){
-				#portifolio_carousel .item a .resumo{
-					text-align: center;
-				}
-				
-				#portifolio_carousel .item a .resumo section{
-					display: none;
-				}
-			}
-			
-			@media screen AND (max-width: 500px){
-				#portifolio_carousel .item a .resumo{
-					display: none;
-				}
-				.footer{
-					display: none;
-				}
-			}
-			
-			@media screen AND (max-width: 700px){
-				.footer{
-					position:relative;
-				}
-			}
-			
-			html, body {height: 100%;}
-
-#wrap {min-height: 100%;}
-
-#main {overflow:auto;
-	padding-bottom: 150px;}  /* must be same height as the footer */
-
-.footer {position: relative;
-	margin-top: -150px; /* negative value of footer height */
-	height: 150px;
-	clear:both;} 
-
-/*Opera Fix*/
-body:before {
-	content:"";
-	height:100%;
-	float:left;
-	width:0;
-	margin-top:-32767px;/
-}
-			
-		
-			
-			
-			
-		</style>
 	</head>
 	<body>
 	
@@ -171,7 +40,7 @@ body:before {
 							<li><a href="index.html#portfolio" class="scroll">Portfólio</a></li>
 							<li><a href="index.html#services" class="scroll">Nossos Serviços</a></li>
 							<li><a href="index.html#matilha" class="scroll">Matilha (Equipe)</a></li>
-							<li><a href="..contact.html">Contato</a></li>
+							<li><a href="contact.html">Contato</a></li>
 						</ul>
 					</nav>
 				<div class="clearfix"> </div>
@@ -295,110 +164,7 @@ body:before {
 		
 		<script type="text/javascript" src="js/owl.carousel.js"></script>
 		
-		<script type="text/javascript">
-			$(document).ready(function() {
- 
-				$("#portifolio_carousel").owlCarousel({		 
-					navigation : true, // Show next and prev buttons
-					navigationText: ["anterior","próximo"],
-					slideSpeed : 500,
-					paginationSpeed : 400,
-					singleItem:true,
-					autoPlay: 10000,
-					transitionStyle: "fade"
-			 
-					// "singleItem:true" is a shortcut for:
-					// items : 1, 
-					// itemsDesktop : false,
-					// itemsDesktopSmall : false,
-					// itemsTablet: false,
-					// itemsMobile : false
-				});
-		 
-			});
-			
-			addEventListener(
-				"load",
-				function(){
-					setTimeout(hideURLbar, 0);
-				},
-				false);				
-			function hideURLbar(){
-				window.scrollTo(0,1);
-			}
-				
-		
-
-				
-			//botôes de navegação
-			$(function () {	
-				var filterList = {
-					init: function () {	
-						// MixItUp plugin
-						// http://mixitup.io
-						$('#portfoliolist').mixitup({
-							targetSelector: '.portfolio',
-							filterSelector: '.filter',
-							effects: ['fade'],
-							easing: 'snap',
-							// call the hover effect
-							onMixEnd: filterList.hoverEffect()
-						});										
-					},
-					hoverEffect: function () {
-						// Simple parallax effect
-						$('#portfoliolist .portfolio').hover(
-							function () {
-								$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
-								$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
-							},
-							function () {
-								$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
-								$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
-							}		
-						);					
-					}
-				};				
-				// Run the show!
-				filterList.init();
-			});
-	
-			$(document).ready(function() {
-				/*
-				var defaults = {
-					containerID: 'toTop', // fading element id
-					containerHoverID: 'toTopHover', // fading element hover id
-					scrollSpeed: 1200,
-					easingType: 'linear' 
-				};
-				*/
-						
-				$().UItoTop({ easingType: 'easeOutQuart' });			
-			});
-			
-			//função do menu encolhido
-			$("span.menu").click(function(){
-								$(".top-nav ul").slideToggle(500, function(){
-								});
-							});
-							
-			//retrair menu quando clicar em algum item
-			$(".top-nav ul").click(function(){	
-
-				if($(window).width()<750){	
-					$(".top-nav ul").slideToggle(500, function(){
-					});
-				}
-			});
-			
-			$(window).resize(function(){
-				if($(window).width()>750){	
-					$(".top-nav ul").show();
-				}else{
-					$(".top-nav ul").hide();
-				}
-			});					
-		</script>		
+		<script type="text/javascript" src="js/wirewolfCustom.js"></script>			
 	</body>
 </html>
 
