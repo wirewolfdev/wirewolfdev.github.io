@@ -253,10 +253,13 @@ h1,h2,h3,h4,h5,h6,label,p{
 /*----*/
 .banner {
 	padding: 2em 0;
-	/*
+}
+
+/*
 	Leandro Andrade Rocha, 30/03/2015.
-	Posicionar corretamente com o header.
-	*/
+	Posicionar corretamente o home com o header.
+*/
+#home .banner {
 	padding-top: 10em;
 }
 .banner-matter{
@@ -517,6 +520,13 @@ div#portfoliolist {
 	padding-top:3em;
 }
 /*----*/
+.cont{
+color:#a2a3a3;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size:3em;
+	padding-bottom:1em;
+} 
+
 .team{
 	float:left;
 	color:#a2a3a3;
@@ -1158,7 +1168,7 @@ ul.box-in {
 .banner-matter {
 	padding: 4em 0 0;
 }
-.port,.ser,.team {
+.port,.ser,.team, .cont {
 	font-size: 2em;
 }
 #filters li span {
@@ -1299,7 +1309,7 @@ p.info{
 .logo img{
 	width:100%;
 }
-.port, .ser, .team {
+.port, .ser, .team , .cont{
 	font-size: 1.4em;
 }
 #filters li span {
@@ -1316,7 +1326,7 @@ p.info{
 .sed, .sit {
 	font-size: 0.9em;
 	line-height: 1.5em;
-	height: 32px;
+	
 	overflow: hidden;
 	width: 55%;
 }
