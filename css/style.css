@@ -28,12 +28,12 @@ html, body {height: 100%;}
 	padding-bottom: 150px;
 }  /* must be same height as the footer */
 
-.footer{
+/*.footer{
 	position: relative;
-	margin-top: -150px; /* negative value of footer height */
+	margin-top: -150px; / * negative value of footer height * /
 	height: 150px;
 	clear:both;
-} 
+}*/
 
 /*Opera Fix*/
 body:before {
@@ -131,7 +131,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 	transform: translateX(0px);
 }
 .top-nav span.menu:before{
-	content: url(../images/menu.png)no-repeat 0px 0px;
+	content: url(../images/menu.png);
 	cursor:pointer;	
 	width:100%;
 }
